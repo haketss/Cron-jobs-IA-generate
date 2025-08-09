@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.5.0",
+    "node-cron": "^4.1.0",
+    "postgres": "^3.4.7"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node src/cron-test.js",
+    "create-table": "node src/tabela.js"
+  }
+}
