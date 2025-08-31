@@ -1,13 +1,31 @@
 {
-  "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "dotenv": "^16.5.0",
-    "node-cron": "^4.1.0",
-    "postgres": "^3.4.7"
-  },
-  "type": "module",
   "scripts": {
-    "start": "node src/cron-test.js",
-    "create-table": "node src/tabela.js"
+    "db:seed": "node  --experimental-strip-types --no-warnings src/db/seed.ts",
+    "start": "node --experimental-strip-types --no-warnings src/server.ts",
+    "dev": "node --experimental-strip-types --no-warnings --watch src/server.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "docker:up": "docker compose up -d"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/multipart": "^9.0.3",
+    "@fastify/swagger": "^9.5.1",
+    "@fastify/swagger-ui": "^5.2.3",
+    "@google/genai": "^1.15.0",
+    "dotenv": "^17.2.1",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-orm": "^0.44.4",
+    "drizzle-seed": "^0.3.1",
+    "fastify": "^5.5.0",
+    "fastify-type-provider-zod": "^5.0.3",
+    "pino": "^9.9.0",
+    "pino-pretty": "^13.1.1",
+    "postgres": "^3.4.7",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0"
   }
 }

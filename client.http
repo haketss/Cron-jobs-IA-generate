@@ -1,0 +1,32 @@
+
+#variables
+@baseUrl = http://localhost:3333
+
+###
+# Fetch all elements
+# @name  getElementos
+GET {{baseUrl}}/elementos
+
+###
+# Create element
+# @name  createElementos
+POST {{baseUrl}}/elementos
+Content-Type: application/json
+
+{
+    "name": "hohooh111111111",
+    "emoje": "🦑"
+}
+###
+
+# fusion elements
+# @name  createElementos
+POST {{baseUrl}}/fusao
+Content-Type: application/json
+
+{
+    "nomeum": "tartaruga",
+    "nomedois": "falinha"
+}
+###
+

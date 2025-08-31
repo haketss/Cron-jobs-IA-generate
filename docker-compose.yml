@@ -1,0 +1,12 @@
+
+services:
+  api-elementos-pg:
+   image: pgvector/pgvector:pg17
+   environment:
+     POSTGRES_USER: emementos
+     POSTGRES_PASSWORD: emementos
+     POSTGRES_DB: emementos
+   ports:
+      - "5432:5432"
+   volumes:
+      - ./docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql
