@@ -14,8 +14,8 @@ POST {{baseUrl}}/elementos
 Content-Type: application/json
 
 {
-    "name": "hohooh111111111",
-    "emoje": "🦑"
+    "name": "ar",
+    "emoje": "💨"
 }
 ###
 
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 {
     "nomeum": "tartaruga",
-    "nomedois": "falinha"
+    "nomedois": "raio"
 }
 ###
 

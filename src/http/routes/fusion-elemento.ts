@@ -1,13 +1,13 @@
-
 import type { FastifyPluginCallbackZod } from "fastify-type-provider-zod";
 import z from "zod/v4";
 import { db } from "../../db/connection.ts";
 import { Emementos } from "../../db/schema/elementos.ts";
 import { generateElemento } from "../../services/gemini.ts";
-import { json } from "stream/consumers";
+import { checkPrimeSync } from "crypto";
 
 export const fusionElementoRoute: FastifyPluginCallbackZod = (app) => {
     app.post('/fusao', {
+        
         schema: {
             body: z.object({
                 nomeum: z.string().min(1),
@@ -17,8 +17,9 @@ export const fusionElementoRoute: FastifyPluginCallbackZod = (app) => {
         }
     },
         async (request, reply) => {
+            reply.header('Access-Control-Allow-Origin', '*');
             const { nomeum, nomedois } = request.body;
-
+             console.log("Requisição recebida:", request.body);
             const fusao = await generateElemento(nomeum, nomedois);
             
             const limpo = fusao.replace(/```json|```/g, "").trim();
