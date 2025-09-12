@@ -5,6 +5,9 @@ export const Emementos = pgTable('elementos', {
     id: uuid().primaryKey().defaultRandom(),
     name: text().notNull(),
     emoje: text(),
-    createdAt: timestamp().defaultNow().notNull(),
+    quemCriou: text(),
+    emojeBaseUm: text(),
+    emojeBaseDois: text(),
+    createdAt: timestamp().defaultNow().notNull()})
 
-})
+

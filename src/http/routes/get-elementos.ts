@@ -12,6 +12,7 @@ export const getElementosRoute: FastifyPluginCallbackZod = (app) => {
                 id: Emementos.id,
                 name: Emementos.name,
                 emoje: Emementos.emoje,
+                quemCriou: Emementos.quemCriou,
                 createdAt: Emementos.createdAt,
             })
             .from(Emementos)

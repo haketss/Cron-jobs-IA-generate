@@ -14,11 +14,10 @@ export async function generateElemento(nomeum: string, nomedois: string) {
 
     const prompt = `qual o resultado da mistura ou fusão desses dois elementos: ${nomeum} + ${nomedois}
 
-    1: o resultado deve ser um json contendo o nome do novo elemento e um emoje mais proximo possivel do que pode ser o resultado.
+    Regras:
+    1: o resultado deve ser um json contendo o nome do novo elemento e um emoje proximo do que pode ser o resultado de preferencia a objetos, mineriais do dia a dia ou da natureza.
    2: o nome do novo elemento deve ser curto, de preferencia uma unica palavra.
-    3: o emoje deve ser um unico caractere.
-    
-   4: o json deve estar no seguinte formato:
+  3: o json deve estar no seguinte formato:
    {
     "name": "nome do novo elemento",
     "emoji": "emoje do novo elemento"
@@ -34,11 +33,11 @@ export async function generateElemento(nomeum: string, nomedois: string) {
             {
                 text: prompt
             },
-              
-            
+
+
         ]
     })
-    
+
 
 
     if (!response.text) {

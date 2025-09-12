@@ -8,6 +8,13 @@
       "when": 1756134659912,
       "tag": "0000_blushing_mauler",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1757589588428,
+      "tag": "0001_peaceful_zaran",
+      "breakpoints": true
     }
   ]
 }

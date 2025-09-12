@@ -25,8 +25,9 @@ POST {{baseUrl}}/fusao
 Content-Type: application/json
 
 {
-    "nomeum": "tartaruga",
-    "nomedois": "raio"
+    "nomeum": "ferro",
+    "nomedois": "terra",
+    "quemCriou": "AI"
 }
 ###
 
